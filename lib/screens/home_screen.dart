@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:riverpod_flutter/screens/future_provider_screen.dart';
 import 'package:riverpod_flutter/screens/provider_screen.dart';
 import 'package:riverpod_flutter/screens/state_provider_screen.dart';
 
@@ -89,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const ProviderScreen(),
+                            builder: (context) => const FutureProviderScreen(),
                           ),
                         );
                       },
