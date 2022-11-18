@@ -35,7 +35,7 @@ class UserScreen extends ConsumerWidget {
                                 // );
                               },
                               child: Card(
-                                color: Colors.blue,
+                                color: Colors.black,
                                 elevation: 4,
                                 margin:
                                     const EdgeInsets.symmetric(vertical: 10),

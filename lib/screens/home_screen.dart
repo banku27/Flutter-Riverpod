@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:riverpod_flutter/screens/future_provider_screen.dart';
 import 'package:riverpod_flutter/screens/provider_screen.dart';
 import 'package:riverpod_flutter/screens/state_provider_screen.dart';
+import 'package:riverpod_flutter/screens/user_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -110,14 +111,14 @@ class HomeScreen extends StatelessWidget {
                     width: 140,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.blueAccent,
+                      color: Colors.blueGrey,
                     ),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const FutureProviderScreen(),
+                            builder: (context) => const UserScreen(),
                           ),
                         );
                       },
