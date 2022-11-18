@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:riverpod_flutter/screens/future_provider_screen.dart';
 import 'package:riverpod_flutter/screens/provider_screen.dart';
 import 'package:riverpod_flutter/screens/state_provider_screen.dart';
+import 'package:riverpod_flutter/screens/stream_provider_screen.dart';
 import 'package:riverpod_flutter/screens/user_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -124,6 +125,35 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: const Text(
                         'User Screen with Future Provider',
+                        style: TextStyle(
+                          fontSize: 19,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 50,
+                    width: 140,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.blueGrey,
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const StreamProviderPage(color: Colors.black),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Stream Provider',
                         style: TextStyle(
                           fontSize: 19,
                           color: Colors.white,
