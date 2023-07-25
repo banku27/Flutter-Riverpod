@@ -26,3 +26,18 @@ In this method, we wrap our widget with the Consumer widget. This gives us acces
 --> ref.read: This method reads the variable only once. It is generally recommended to use this outside the build method.
 
 Keep in mind that providers are read-only, so we can't update the value of a provider outside of its definition. If you have a stateful widget and want to access the widget ref, you can wrap it with the Consumer widget or extend the ConsumerState class.
+
+2. State Provider :
+
+--> State Provider is used to update the value from outside the provider.
+
+--> State Provider is an upgrade over the normal provider.
+
+--> The return data type of the State Provider can be nullable.
+
+--> Access to the provider's value can be done using ref.watch within the build method.
+
+--> To change the value of the State Provider, use ref.read and ref.read.notifier.update((state) => newValue)
+
+"State Provider is used to update the value from outside the provider, which is not possible using the normal provider."
+
