@@ -52,3 +52,30 @@ Example:
 
 Let's begin by a UserNotifier class that extends StateNotifier. This class will contain methods to update the name and age of a user.
 
+class UserNotifier extends StateNotifier<User> {
+
+UserNotifier(): super(User()); 
+
+void updateName(String newName){
+void updateAge(int newAge) {
+state name = newName:
+state age = newAge:
+}
+}
+
+Now, we can use the StateNotifierProvider to provide the UserNotifier to our application. We need to specify the data type of the state, which in our case is User.
+
+final userProvider = StateNotifier Provider((ref) => UserNotifier());
+
+To access the state and update its values, we can use the ref.watch method. This will give us access to the UserNotifier and its state.
+
+final user = ref.watch(userProvider);
+
+Now, we can update the name and age of the user by calling the updateName and updateAge methods
+
+user.updateName("Banku');
+user.updateAge (25):
+
+By using the StateNotifierProvider and StateNotifier, we can easily manage and update the state of our application
+
+Earlier, we used the state controller with the state provider. However, now with the state notifier provider, we can access the entire class and call methods like updateName easily. This allows us to have all our business logic in one class and create multiple functions.
