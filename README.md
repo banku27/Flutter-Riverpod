@@ -8,11 +8,12 @@ There are certain problems with Provider that cannot be fixed, such as confusing
 
 # Getting Started with Riverpod
 --Types
-1. Provider:
+# 1. Provider:
 Provider is an object that provides data to widgets or other providers. It is a read-only widget and cannot update the value inside it. It can be used to provide primitive and non-primitive data types, as well as instances of classes.
 To create a Provider, define a final variable with the desired type and assign it a value using a function. For example:
 
 final nameProvider = Provider<String>((ref) => 'Pankaj');
+
 To access the value provided by the nameProvider, you can use the Consumer widget or the ref.watch() method. For example:
 final name = ref.watch(nameProvider); //Now you can use the value of name in your widget.
 
@@ -27,7 +28,7 @@ In this method, we wrap our widget with the Consumer widget. This gives us acces
 
 Keep in mind that providers are read-only, so we can't update the value of a provider outside of its definition. If you have a stateful widget and want to access the widget ref, you can wrap it with the Consumer widget or extend the ConsumerState class.
 
-2. State Provider :
+# 2. State Provider :
 
 --> State Provider is used to update the value from outside the provider.
 
@@ -40,4 +41,14 @@ Keep in mind that providers are read-only, so we can't update the value of a pro
 --> To change the value of the State Provider, use ref.read and ref.read.notifier.update((state) => newValue)
 
 "State Provider is used to update the value from outside the provider, which is not possible using the normal provider."
+
+# 3. StateNotifier Provider:
+
+StateNotifierProvider, which is used for complex values or classes that need to be updated or manipulated. It allows you to keep your logic in a single plcae, rather than scattering it around in different widgets.
+
+StateNotifierProvider is a way to provide state management for our models.
+
+Example:
+
+Let's begin by a UserNotifier class that extends StateNotifier. This class will contain methods to update the name and age of a user.
 
