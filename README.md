@@ -79,3 +79,15 @@ user.updateAge (25):
 By using the StateNotifierProvider and StateNotifier, we can easily manage and update the state of our application
 
 Earlier, we used the state controller with the state provider. However, now with the state notifier provider, we can access the entire class and call methods like updateName easily. This allows us to have all our business logic in one class and create multiple functions.
+
+To update a property, we can use the state copyWith method. For example, if we want to update the age property, we can create a function called updateAge and call state.copyWith to update the value.
+
+It's important to note that only when the value of the state changes, the clients listening to it will be notified. If we don't update the state value, nothing will be updated.
+
+The state in the userNotifier class is immutable outside of the class but can be changed within the class.
+
+If we want to define the state directly in the class itself, we can remove the super.state call in the constructor and pass the state directly in the class definition.
+
+If we want to run a constructor when the userNotifier class is initiated, we can simply include the desired code within the constructor.
+
+There is a third way to use the ref property, which is the select method. This allows us to rerun the widget tree only when a specific property, like name, changes. We can use the ref.watch method in combination with select to achieve this.
