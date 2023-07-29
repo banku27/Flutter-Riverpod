@@ -91,3 +91,7 @@ If we want to define the state directly in the class itself, we can remove the s
 If we want to run a constructor when the userNotifier class is initiated, we can simply include the desired code within the constructor.
 
 There is a third way to use the ref property, which is the select method. This allows us to rerun the widget tree only when a specific property, like name, changes. We can use the ref.watch method in combination with select to achieve this.
+
+# 4. ChangeNotifierProvider
+
+The ChangeNotifierProvider is similar to the StateProvider, but it is recommended to use the StateNotifier Provider instead. The ChangeNotifier Provider allows us to change the value of the state variable outside of the class, which can lead to mutable code and is not recommended.
